@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Discover and register for exciting campus events with CampusVibe.">
+        <title>CampusVibe | Discover Campus Events</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap"
+            rel="stylesheet">
+
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body>
+
+        <!-- Navigation -->
+        <header class="navbar">
+            <div class="container nav-content">
+
+                <a href="#" class="logo">
+                    <span class="logo-icon">✦</span>
+                    CampusVibe
+                </a>
+
+                <nav class="nav-links" id="navLinks">
+                    <a href="#home">Home</a>
+                    <a href="#events">Explore Events</a>
+                    <a href="#about">About</a>
+                </nav>
+
+                <div class="nav-actions">
+                    <button id="themeToggle" class="theme-btn" aria-label="Toggle theme">☾</button>
+                    <a href="#events" class="nav-button">Explore Now ↗</a>
+                    <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+                </div>
+
+            </div>
+        </header>
+
+
+        <main>
+
+            <!-- Hero Section -->
+            <section class="hero" id="home">
+                <div class="container hero-content">
+
+                    <div class="hero-text">
+                        <span class="eyebrow">✦ YOUR CAMPUS. YOUR COMMUNITY.</span>
+
+                        <h1>
+                            Make Your
+                            <span>Campus Life</span>
+                            Unforgettable.
+                        </h1>
+
+                        <p>
+                            Discover exciting events, meet new people,
+                            explore your interests and create memories
+                            beyond the classroom.
+                        </p>
+
+                        <div class="hero-buttons">
+                            <a href="#events" class="primary-btn">Explore Events ↗</a>
+                            <a href="#about" class="secondary-btn">Learn More</a>
+                        </div>
+
+                        <div class="hero-stats">
+                            <div>
+                                <h3>50+</h3>
+                                <p>Events</p>
+                            </div>
+                            <div>
+                                <h3>1K+</h3>
+                                <p>Students</p>
+                            </div>
+                            <div>
+                                <h3>10+</h3>
+                                <p>Categories</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="hero-visual">
+                        <div class="hero-image">
+                            <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=900"
+                                alt="Students enjoying a live campus event">
+                        </div>
+
+                        <div class="floating-card">
+                            <span class="floating-icon">🎉</span>
+                            <div>
+                                <strong>Something exciting?</strong>
+                                <p>It's happening on campus!</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+
+            <!-- Events Section -->
+            <section class="events-section" id="events">
+                <div class="container">
+
+                    <div class="section-heading">
+                        <div>
+                            <span class="eyebrow">FIND YOUR NEXT EXPERIENCE</span>
+                            <h2>Explore Events</h2>
+                            <p>There's always something happening around you.</p>
+                        </div>
+
+                        <span class="event-count" id="eventCount">Upcoming Events</span>
+                    </div>
+
+
+                    <!-- Search and Filters -->
+                    <div class="filter-area">
+
+                        <div class="search-box">
+                            <span>⌕</span>
+                            <input type="text" id="searchInput" placeholder="Search events..."
+                                aria-label="Search events">
+                        </div>
+
+                        <select id="categoryFilter" aria-label="Filter by category">
+                            <option value="all">All Categories</option>
+                            <option value="Technology">Technology</option>
+                            <option value="Music">Music</option>
+                            <option value="Sports">Sports</option>
+                            <option value="Cultural">Cultural</option>
+                            <option value="Workshop">Workshop</option>
+                        </select>
+
+                    </div>
+
+
+                    <!-- Event Cards: Generated using JavaScript -->
+                    <div class="events-grid" id="eventsGrid">
+
+                        <!-- JavaScript will insert event cards here -->
+
+                    </div>
+
+                    <p class="no-events" id="noEvents" hidden>
+                        No events found. Try another search!
+                    </p>
+
+                </div>
+            </section>
+
+
+            <!-- About Section -->
+            <section class="about-section" id="about">
+                <div class="container about-content">
+
+                    <span class="eyebrow">MORE THAN JUST EVENTS</span>
+
+                    <h2>Your Campus Experience Starts Here.</h2>
+
+                    <p>
+                        CampusVibe brings your college community together.
+                        From exciting fests and technical competitions to
+                        workshops and cultural celebrations, find experiences
+                        that inspire you.
+                    </p>
+
+                    <a href="#events" class="primary-btn">Find Your Next Event ↗</a>
+
+                </div>
+            </section>
+
+        </main>
+
+
+        <!-- Event Details Modal -->
+        <div class="modal" id="eventModal" aria-hidden="true">
+            <div class="modal-content">
+
+                <button class="close-btn" id="closeEventModal" aria-label="Close">×</button>
+
+                <div id="eventDetails">
+                    <!-- Event details inserted by JavaScript -->
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- Registration Modal -->
+        <div class="modal" id="registerModal" aria-hidden="true">
+            <div class="modal-content registration-content">
+
+                <button class="close-btn" id="closeRegisterModal" aria-label="Close">×</button>
+
+                <div id="registrationFormContainer">
+
+                    <span class="eyebrow">SAVE YOUR SPOT</span>
+                    <h2>Event Registration</h2>
+                    <p>Fill in your details to register for the event.</p>
+
+                    <form id="registrationForm">
+
+                        <label for="studentName">Full Name</label>
+                        <input type="text" id="studentName" placeholder="Enter your full name" required>
+
+                        <label for="studentEmail">Email Address</label>
+                        <input type="email" id="studentEmail" placeholder="Enter your email" required>
+
+                        <label for="studentPhone">Phone Number</label>
+                        <input type="tel" id="studentPhone" placeholder="Enter your phone number" required>
+
+                        <label for="selectedEvent">Selected Event</label>
+                        <select id="selectedEvent" required>
+                            <option value="">Select an event</option>
+                        </select>
+
+                        <p class="form-error" id="formError"></p>
+
+                        <button type="submit" class="primary-btn submit-btn">
+                            Confirm Registration ↗
+                        </button>
+
+                    </form>
+
+                </div>
+
+
+                <!-- Registration Success Message -->
+                <div class="success-message" id="successMessage" hidden>
+                    <div class="success-icon">✓</div>
+                    <h2>You're Registered!</h2>
+                    <p>Your registration has been successfully completed.</p>
+                    <button class="primary-btn" id="finishRegistration">
+                        Done
+                    </button>
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container footer-content">
+
+                <a href="#" class="logo">
+                    <span class="logo-icon">✦</span>
+                    CampusVibe
+                </a>
+
+                <p>Making campus life more exciting, one event at a time.</p>
+
+                <span>© 2026 CampusVibe. All rights reserved.</span>
+
+            </div>
+        </footer>
+
+
+        <script src="script.js"></script>
+
+    </body>
+
+</html>
